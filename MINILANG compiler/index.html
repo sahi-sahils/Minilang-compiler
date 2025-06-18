@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniLang Web Compiler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🧠 MiniLang Compiler</h1>
+      <p class="tagline">A stack-based language interpreter built for clarity and speed</p>
+    </header>
+
+    <main class="main-grid">
+      <div class="editor-container">
+        <label for="codeInput">💻 Write MiniLang Code</label>
+        <textarea id="codeInput" spellcheck="false" placeholder="10 5 + print&#10;6 2 * print"></textarea>
+        <button id="runBtn">▶ Run</button>
+      </div>
+
+      <div class="output-container">
+        <h3>📤 Output Terminal</h3>
+        <div id="output" class="terminal">Waiting for input...</div>
+
+        <h4>📚 Example Input</h4>
+        <pre class="example">
+10 5 + print
+8 2 - print
+6 3 * print
+20 4 / print
+        </pre>
+
+        <h4>✅ Expected Output</h4>
+        <pre class="example">
+15
+6
+18
+5
+        </pre>
+      </div>
+    </main>
+
+    <footer>
+      Made by <strong>Sahil</strong> | Compiler Capstone Project
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
