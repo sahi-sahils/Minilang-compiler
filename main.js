@@ -1,9 +1,7 @@
 let pyodideReady = false;
 let pyodide = null;
 async function loadPyodideAndPackages() {
-  pyodide = await loadPyodide();
-
-  
+  pyodide = await loadPyodide(); 
   await pyodide.loadPackage("micropip");
   await pyodide.runPythonAsync(`
 def interpret_minilang(code):
